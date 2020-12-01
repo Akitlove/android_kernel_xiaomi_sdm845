@@ -40,6 +40,9 @@ static int hwinfo_proc_show(struct seq_file *m, void *v)
 	case 0x01ad:
 		seq_printf(m, "UFS: Hynix\n");
 		break;
+	case 0x0145:
+		seq_printf(m, "UFS: Sandisk\n");
+		break;
 	default:
 		seq_printf(m, "UFS: Unknown %x\n", hw_info.emmc_info);
 		break;
@@ -77,7 +80,7 @@ static int hwinfo_proc_show(struct seq_file *m, void *v)
 		seq_printf(m, "TOUCH IC: Focaltech\n");
 		break;
 	case 4:
-		seq_printf(m, "TOUCH IC: ST\n");
+		seq_printf(m, "TOUCH IC: FTS\n");
 		break;
 	case 5:
 		seq_printf(m, "TOUCH IC: Novatek\n");
